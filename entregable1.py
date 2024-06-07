@@ -24,6 +24,7 @@ class Asignatura(): #Creamos esta clase para las asignaturas
             return self.name == other.name and self.creditos == other.creditos
         return False
 
+
 class Persona: #Creamos una clase persona de la que heredaran los demás sus atributos con los datos que nos piden
     def __init__(self, nombre, dni, direccion, sexo): #inicializamos la clase
         self._nombre = nombre
@@ -35,6 +36,7 @@ class Persona: #Creamos una clase persona de la que heredaran los demás sus atr
 
     def devuelve_datos(self):  #creamos esta función para que podamos mostrar los datos de la persona ya que son privados
         return 'Nombre: '+ self._nombre + ' DNI: '+ self._dni + ' Dirección: '+ self._direccion+' Sexo : '+self._sexo
+
 
 class MiembroDpto(Persona): #Creamos la clase miembrodpto que hereda de persona y además tiene los atributos departamento y el tipo de miembro que es
     def __init__(self, nombre, dni, direccion, sexo, departamento): #inicializamos el miembro dpto
@@ -53,6 +55,7 @@ class MiembroDpto(Persona): #Creamos la clase miembrodpto que hereda de persona 
 
     def devuelve_datos(self): #creamos esta función para que podamos mostrar los datos del miembro dpto ya que son privados
         return 'Nombre: '+ self._nombre + ' DNI: '+ self._dni + ' Dirección: '+ self._direccion+' Sexo : '+self._sexo+' Departamento: '+self._departamento
+
 
 class ProfesorAsociado(MiembroDpto): #Creamos la clase profesor asociado que hereda de miembro dpto
     def __init__(self, nombre, dni, direccion, sexo, departamento,asignaturas): #inicializamos el profesor asociado
